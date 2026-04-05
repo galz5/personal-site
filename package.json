@@ -10,6 +10,9 @@
 		"build": "astro build",
 		"preview": "astro preview",
 		"astro": "astro",
+		"check": "biome check ./src",
+		"check:fix": "biome check --write ./src",
+		"format": "biome format --write ./src",
 		"prepare": "husky",
 		"lint-staged": "lint-staged"
 	},
