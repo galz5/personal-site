@@ -1,1 +1,22 @@
 @import "tailwindcss";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--bg: #050505;
+	--text: #e8e6e3;
+	--accent: #6d9aff;
+	--accent-dim: rgba(109, 154, 255, 0.08);
+	--grain-opacity: 0.03;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: "Space Mono", monospace;
+	min-height: 100vh;
+}
