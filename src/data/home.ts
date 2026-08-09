@@ -57,7 +57,7 @@ export const writingPosts: WritingPost[] = [
 ];
 
 export const contactLinks = {
-	email: "#", // TODO: mailto:hey@galoz.dev
-	linkedin: "#", // TODO: real LinkedIn URL
-	github: "#", // TODO: real GitHub URL
+	email: "mailto:hey@galoz.dev",
+	linkedin: "https://www.linkedin.com/in/galoz05/",
+	github: "https://github.com/galz5",
 };
