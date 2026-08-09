@@ -1,4 +1,8 @@
 ---
+import "@fontsource-variable/inter";
+import "@fontsource/source-serif-4/400.css";
+import "@fontsource/source-serif-4/600.css";
+import "@fontsource/source-serif-4/700.css";
 import "@/styles/global.css";
 
 interface Props {
@@ -6,8 +10,10 @@ interface Props {
 	description?: string;
 }
 
-const { title = "Gal Oz", description = "Personal site of Gal Oz." } =
-	Astro.props;
+const {
+	title = "Gal Oz",
+	description = "Senior AI Engineer — research, writing, and projects.",
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +23,14 @@ const { title = "Gal Oz", description = "Personal site of Gal Oz." } =
     <meta name="description" content={description} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script is:inline>
+      (function () {
+        const stored = localStorage.getItem("theme");
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const isDark = stored ? stored === "dark" : prefersDark;
+        document.documentElement.classList.toggle("dark", isDark);
+      })();
+    </script>
     <title>{title}</title>
   </head>
   <body>
