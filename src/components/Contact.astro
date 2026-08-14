@@ -1,0 +1,25 @@
+---
+import emailIcon from "@/assets/icons/email.svg?raw";
+import githubIcon from "@/assets/icons/github.svg?raw";
+import linkedinIcon from "@/assets/icons/linkedin.svg?raw";
+import { buttonVariants } from "@/components/ui/button";
+import { contactLinks } from "@/data/home";
+import { cn } from "@/lib/utils";
+
+const contactButtonClass = cn(
+	buttonVariants({ variant: "outline", size: "icon" }),
+	"h-11 w-11 hover:border-primary hover:bg-transparent hover:text-foreground dark:bg-transparent dark:hover:bg-transparent [&_svg]:size-[19px]",
+);
+---
+
+<section id="contact" class="px-6 py-[88px] text-center sm:px-16">
+  <h2 class="mb-8 font-serif text-2xl font-semibold">Get in touch</h2>
+  <div class="flex justify-center gap-5">
+    <a href={contactLinks.email} aria-label="Email" class={contactButtonClass} set:html={emailIcon}>
+    </a>
+    <a href={contactLinks.linkedin} aria-label="LinkedIn" class={contactButtonClass} set:html={linkedinIcon}>
+    </a>
+    <a href={contactLinks.github} aria-label="GitHub" class={contactButtonClass} set:html={githubIcon}>
+    </a>
+  </div>
+</section>
