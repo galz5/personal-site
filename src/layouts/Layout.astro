@@ -4,10 +4,14 @@ import "@/styles/global.css";
 interface Props {
 	title?: string;
 	description?: string;
+	noindex?: boolean;
 }
 
-const { title = "Gal Oz", description = "Personal site of Gal Oz." } =
-	Astro.props;
+const {
+	title = "Gal Oz",
+	description = "Personal site of Gal Oz.",
+	noindex = false,
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -15,6 +19,7 @@ const { title = "Gal Oz", description = "Personal site of Gal Oz." } =
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
