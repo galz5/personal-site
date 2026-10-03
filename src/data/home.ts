@@ -31,6 +31,15 @@ export const publications: Publication[] = [
 			"Exploring the challenge of tool selection in LLM-powered applications.",
 		href: "https://medium.com/elementor-engineers/when-llms-choose-the-wrong-tools-the-hidden-challenge-behind-ai-powered-applications-5c50d20998c5?sharedUserId=galoz05",
 	},
+	{
+		title:
+			"Master’s Thesis: Automatic analysis of the political discourse change on Facebook during four election campaigns in Israel",
+		venue: "Bar-Ilan University",
+		year: 2022,
+		summary:
+			"Using NLP and machine learning to study shifts in political sentiment across four Israeli election campaigns.",
+		href: "https://is.biu.ac.il/sites/is/files/thesis/Gal%20Oz_eng.pdf",
+	},
 ];
 
 export const contactLinks = {
