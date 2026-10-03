@@ -1,0 +1,13 @@
+---
+import { person } from "@/data/home";
+---
+
+<section id="hero" class="px-6 py-16 text-left sm:px-16 sm:py-24 md:py-[100px]">
+  <h1 class="mb-2.5 font-serif text-[46px] leading-[1.1] font-semibold tracking-[-0.01em]">
+    {person.name}
+  </h1>
+  <p class="mb-[22px] text-[19px] font-medium text-primary">{person.role}</p>
+  <p class="max-w-[900px] text-base leading-[1.65] text-muted-foreground">
+    {person.bio}
+  </p>
+</section>

@@ -1,4 +1,8 @@
 ---
+import "@fontsource-variable/inter";
+import "@fontsource/source-serif-4/400.css";
+import "@fontsource/source-serif-4/600.css";
+import "@fontsource/source-serif-4/700.css";
 import "@/styles/global.css";
 
 interface Props {
@@ -9,7 +13,7 @@ interface Props {
 
 const {
 	title = "Gal Oz",
-	description = "Personal site of Gal Oz.",
+	description = "Senior AI Engineer — research, writing, and projects.",
 	noindex = false,
 } = Astro.props;
 ---
@@ -22,7 +26,27 @@ const {
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="sitemap" href="/sitemap-index.xml" />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+    <script is:inline>
+      (function () {
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const root = document.documentElement;
+        try {
+          const stored = localStorage.getItem("theme");
+          if (stored === "dark" || stored === "light") {
+            root.dataset.theme = stored;
+          }
+        } catch {
+          // Keep the system theme when storage is unavailable.
+        }
+        const applyTheme = () => {
+          root.classList.toggle("dark", root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : systemTheme.matches);
+        };
+        applyTheme();
+        systemTheme.addEventListener("change", applyTheme);
+      })();
+    </script>
     <title>{title}</title>
   </head>
   <body>
