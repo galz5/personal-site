@@ -25,7 +25,13 @@ const toggleButtonClass = cn(
 <script>
   const btn = document.getElementById("theme-toggle");
   btn?.addEventListener("click", () => {
-    const isDark = document.documentElement.classList.toggle("dark");
-    localStorage.setItem("theme", isDark ? "dark" : "light");
+    const root = document.documentElement;
+    const theme = root.classList.toggle("dark") ? "dark" : "light";
+    root.dataset.theme = theme;
+    try {
+      localStorage.setItem("theme", theme);
+    } catch {
+      // The toggle still works when the browser blocks storage.
+    }
   });
 </script>

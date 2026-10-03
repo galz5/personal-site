@@ -28,10 +28,23 @@ const {
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script is:inline>
       (function () {
-        const stored = localStorage.getItem("theme");
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        const isDark = stored ? stored === "dark" : prefersDark;
-        document.documentElement.classList.toggle("dark", isDark);
+        const systemTheme = window.matchMedia("(prefers-color-scheme: dark)");
+        const root = document.documentElement;
+        try {
+          const stored = localStorage.getItem("theme");
+          if (stored === "dark" || stored === "light") {
+            root.dataset.theme = stored;
+          }
+        } catch {
+          // Keep the system theme when storage is unavailable.
+        }
+        const applyTheme = () => {
+          root.classList.toggle("dark", root.dataset.theme
+            ? root.dataset.theme === "dark"
+            : systemTheme.matches);
+        };
+        applyTheme();
+        systemTheme.addEventListener("change", applyTheme);
       })();
     </script>
     <title>{title}</title>
