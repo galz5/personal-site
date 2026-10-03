@@ -10,7 +10,7 @@ import { publications } from "@/data/home";
         <div class="flex flex-col gap-2 border-b border-border pb-[26px] sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
           <div>
             <div class="mb-1.5 text-[17px] font-semibold">{pub.title}</div>
-            <div class="mb-2 text-sm text-muted-foreground">{pub.venue}</div>
+            <div class="mb-2 text-sm text-muted-foreground">{pub.venue} · {pub.year}</div>
             <div class="max-w-[600px] text-[15px] leading-[1.5] text-muted-foreground">{pub.summary}</div>
           </div>
           <a href={pub.href} class="shrink-0 text-sm whitespace-nowrap text-primary">

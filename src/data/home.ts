@@ -1,6 +1,7 @@
 export interface Publication {
 	title: string;
 	venue: string;
+	year: number;
 	summary: string;
 	href: string;
 }
@@ -8,24 +9,27 @@ export interface Publication {
 export const person = {
 	name: "Gal Oz",
 	role: "Senior AI Engineer",
-	bio: "Software engineer with 7 years of experience building backend systems and production AI with LLMs, RAG, and autonomous agents. NLP research background and recognized LangChain.js contributor. I take products from concept to production in fast-paced startups, with a focus on user impact.",
+	bio: "Senior Software Engineer with 7 years in backend systems and production AI with LLMs, RAG, and autonomous agents. I hold a master’s in Information Science, with a thesis focused on Natural Language Processing (NLP) that became a published research article. I build products from concept to production with a focus on user impact.",
 };
 
 export const publications: Publication[] = [
 	{
 		title:
+			"Modeling public engagement in political discourse on Facebook in times of political crisis: the case of the four-cycle election loop",
+		venue: "Online Information Review",
+		year: 2026,
+		summary:
+			"Analyzing sentiment and public engagement across more than 8,000 Facebook posts by Israeli politicians during four election cycles (2019–2021).",
+		href: "https://www.emerald.com/oir/article-abstract/50/5/999/1390339/Modeling-public-engagement-in-political-discourse",
+	},
+	{
+		title:
 			"When LLMs Choose the Wrong Tools: The Hidden Challenge Behind AI-Powered Applications",
-		venue: "Elementor Engineers · Medium",
+		venue: "Elementor Engineers",
+		year: 2025,
 		summary:
 			"Exploring the challenge of tool selection in LLM-powered applications.",
 		href: "https://medium.com/elementor-engineers/when-llms-choose-the-wrong-tools-the-hidden-challenge-behind-ai-powered-applications-5c50d20998c5?sharedUserId=galoz05",
-	},
-	{
-		title: "Master's Thesis: [Thesis Title Placeholder]",
-		venue: "University Name, 2019",
-		summary:
-			"Placeholder abstract line describing the thesis scope and key result.",
-		href: "#",
 	},
 ];
 
