@@ -5,53 +5,26 @@ export interface Publication {
 	href: string;
 }
 
-export interface WritingPost {
-	title: string;
-	platform: string;
-	date: string;
-	href: string;
-}
-
 export const person = {
 	name: "Gal Oz",
 	role: "Senior AI Engineer",
-	bio: "Placeholder bio — senior software engineer building AI systems, with a master's thesis on [thesis topic placeholder]. Replace this paragraph with your own summary.",
+	bio: "Software engineer with 7 years of experience building backend systems and production AI with LLMs, RAG, and autonomous agents. NLP research background and recognized LangChain.js contributor. I take products from concept to production in fast-paced startups, with a focus on user impact.",
 };
 
 export const publications: Publication[] = [
 	{
-		title: "Placeholder Paper Title on Applied ML",
-		venue: "Conference / Journal, 2025",
+		title:
+			"When LLMs Choose the Wrong Tools: The Hidden Challenge Behind AI-Powered Applications",
+		venue: "Elementor Engineers · Medium",
 		summary:
-			"One-line placeholder summary of the research contribution and findings.",
-		href: "#",
+			"Exploring the challenge of tool selection in LLM-powered applications.",
+		href: "https://medium.com/elementor-engineers/when-llms-choose-the-wrong-tools-the-hidden-challenge-behind-ai-powered-applications-5c50d20998c5?sharedUserId=galoz05",
 	},
 	{
 		title: "Master's Thesis: [Thesis Title Placeholder]",
 		venue: "University Name, 2019",
 		summary:
 			"Placeholder abstract line describing the thesis scope and key result.",
-		href: "#",
-	},
-];
-
-export const writingPosts: WritingPost[] = [
-	{
-		title: "Placeholder blog post title",
-		platform: "Medium",
-		date: "Jun 2026",
-		href: "#",
-	},
-	{
-		title: "Another placeholder writing entry",
-		platform: "LinkedIn",
-		date: "Feb 2026",
-		href: "#",
-	},
-	{
-		title: "Notes on a placeholder topic",
-		platform: "Medium",
-		date: "Nov 2025",
 		href: "#",
 	},
 ];
